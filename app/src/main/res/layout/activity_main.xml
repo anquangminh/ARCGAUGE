@@ -1,221 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/color_text"
-            android:textSize="20sp"
-            android:text="TEMPERATURE"/>
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/color_text"
-            android:textSize="20sp"
-            android:text="HUMIDITY"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ProgressBar
-                android:id="@+id/progress_tem"
-                style="@style/CircleProgressBar"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:max="50"
-                tools:progress="30" />
-            <TextView
-                android:layout_centerInParent="true"
-                android:id="@+id/text_view_tem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="60%" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <ProgressBar
-                android:id="@+id/progress_hum"
-                style="@style/HumProgressBar"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:max="100"
-                tools:progress="60"/>
-            <TextView
-                android:layout_centerInParent="true"
-                android:id="@+id/text_view_hum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="60%" />
-        </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/color_text"
-            android:textSize="20sp"
-            android:text="AIR QUALITY"/>
-        <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ProgressBar
-                android:id="@+id/progress_air"
-                style="@style/AirProgressBar"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:max="30"
-                tools:progress="14"/>
-            <TextView
-                android:layout_centerInParent="true"
-                android:id="@+id/text_view_air"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="14.471pmm" />
-        </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             <TextView
-                android:layout_width="60sp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_text"
-                android:textSize="16sp"
-                android:text="TIME"/>
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_text"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:text="TEMPERATURE"/>
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_text"
-                android:textSize="16sp"
-                android:text="HUDIMITY"/>
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_text"
-                android:textSize="16sp"
-                android:text="AIR QUALITY"/>
+                android:textSize="20sp"
+                android:text="HUMIDITY"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="60sp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_text"
-                android:background="@android:color/transparent"
-                android:text="1h"/>
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_tem"
-                android:background="@android:color/transparent"
-                android:text="30"/>
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_hum"
-                android:background="@android:color/transparent"
-                android:text="59"/>
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_air"
-                android:background="@android:color/transparent"
-                android:text="15"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="60sp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_text"
-                android:background="@android:color/transparent"
-                android:text="6h"/>
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_tem"
-                android:background="@android:color/transparent"
-                android:text="30"/>
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_hum"
-                android:background="@android:color/transparent"
-                android:text="59"/>
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_air"
-                android:background="@android:color/transparent"
-                android:text="15"/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:id="@+id/progress_tem"
+                    style="@style/CircleProgressBar"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:max="50"
+                    tools:progress="30" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/text_view_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    tools:text="60%" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:onClick="getData"
-            android:gravity="center"
-            android:text="Show Data"/>
-    </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/progress_hum"
+                    style="@style/HumProgressBar"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:max="100"
+                    tools:progress="60"/>
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/text_view_hum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    tools:text="60%" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:text="AIR QUALITY"/>
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progress_air"
+                    style="@style/AirProgressBar"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:max="30"
+                    tools:progress="14"/>
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/text_view_air"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    tools:text="14.471pmm" />
+            </RelativeLayout>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
 </LinearLayout>
+    </ScrollView>
